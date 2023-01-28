@@ -12,9 +12,20 @@ export default function Home({ articles }) {
   );
 }
 
+// export const getStaticProps = async () => {
+//   const result = await fetch(
+//     "https://jsonplaceholder.typicode.com/posts?_limit=6"
+//   );
+//   const articles = await result.json();
+//   return {
+//     props: {
+//       articles,
+//     },
+//   };
+// };
 export const getStaticProps = async () => {
   const result = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=6"
+    "http://localhost:3000/api/articles"
   );
   const articles = await result.json();
   return {
